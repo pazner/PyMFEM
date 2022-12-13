@@ -53,6 +53,7 @@ jobs:
           ls -l /opt/python/
           export PATH=/opt/python/${{ matrix.pythonpath }}/bin:$PATH
           pip3 install six auditwheel twine
+          pip3 install numpy==1.21.6
 
           if [ -f requirements.txt ]; then
              pip3 install -r requirements.txt
